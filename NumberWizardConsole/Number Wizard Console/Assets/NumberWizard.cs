@@ -20,12 +20,13 @@ public class NumberWizard : MonoBehaviour
         minimum = 1;
         guess   = 500;
 
+        Debug.Log("[===========[Number Wizard]===========]");
         Debug.Log("Salut! Welcome to Number Wizard!");
         Debug.Log("Pick a number and I'll show you that I can guess it.");
         Debug.Log($"Your number must not be higher than {maximum}");
         Debug.Log($"And it can't be lower than {minimum}");
 
-        Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = correct \n");
+        Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = correct");
         Debug.Log($"Tell me if your number is higher or lower than {guess}");
 
         maximum = maximum + 1;
