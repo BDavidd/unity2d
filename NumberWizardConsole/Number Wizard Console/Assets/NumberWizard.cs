@@ -11,13 +11,15 @@ public class NumberWizard : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        Debug.Log("Welcome to number wizard!");
-        Debug.Log("Pick a number");
-        Debug.Log("The highest number is: " + maximum);
-        Debug.Log("The lowest number is: " + minimum);
-        
-        Debug.Log("Tell me if your number is higher or lower than 500");
-        Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = correct");
+        Debug.Log("Salut! Welcome to Number Wizard!");
+        Debug.Log("Pick a number and I'll show you that I can guess it.");
+        Debug.Log($"Your number must not be higher than {maximum}");
+        Debug.Log($"And it can't be lower than {minimum}");
+
+        Debug.Log("Push Up = Higher, Push Down = Lower, Push Enter = correct \n");
+        Debug.Log($"Tell me if your number is higher or lower than {guess}");
+
+        maximum = maximum + 1;
     }
 
     // Update is called once per frame
@@ -25,17 +27,19 @@ public class NumberWizard : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Up Arrow key was pressed. " + guess);
             minimum = guess;
+            guess = (maximum + minimum) / 2;
+            Debug.Log($"So higher... Could it be {guess}?");
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Down Arrow key was pressed. " + guess);
             maximum = guess;
+            guess = (maximum + minimum) / 2;
+            Debug.Log($"So lower... Could it be {guess}?");
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
-            Debug.Log("Enter key was pressed");
+            Debug.Log($"I knew from the beginning that it is {guess}!");
         }
     }
 }
