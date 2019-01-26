@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4cf203f14efe3345bb7523f85e77dcc, type: 3}
-  m_Name: StartingState
+  m_Name: SpendState
   m_EditorClassIdentifier: 
-  storyText: "You are Dmitri Karamazov, an ex liutenant from the Russian Army.\r\nYour
-    bethroted, Katerina Ivanova gave you 3000 roubles for you to send by mail to her
-    aunt.\r\n\nYou can deliver the money or spend them in order to impress the girl
-    you like, Agrafena Alexandrovna.\r\n\r\nWhat do you do?\r\n1: Spend the money\r\n2:
-    Deliver the money"
+  storyText: You spend the money.
   nextStates:
-  - {fileID: 11400000, guid: b6f2e498adf5eec42a95ede7691a7867, type: 2}
   - {fileID: 11400000, guid: defc3b1d195c1e348bb3e3141b5267b3, type: 2}
+  - {fileID: 11400000, guid: e127d24cf6592e94297b308ec23c6f61, type: 2}
