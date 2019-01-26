@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4cf203f14efe3345bb7523f85e77dcc, type: 3}
   m_Name: DeliverState
   m_EditorClassIdentifier: 
-  storyText: You deliver the money.
+  storyText: 'You deliver the money.
+
+    Katerina Ivanova thanks you and gives you another 1500 roubles.
+
+    You can now move away with Agrafena Alexandrovna.
+
+
+    Press 1 to continue.'
   nextStates:
-  - {fileID: 11400000, guid: b6f2e498adf5eec42a95ede7691a7867, type: 2}
-  - {fileID: 11400000, guid: e127d24cf6592e94297b308ec23c6f61, type: 2}
+  - {fileID: 11400000, guid: 0f7e535e21cea5241a6e8385b36cc9cf, type: 2}

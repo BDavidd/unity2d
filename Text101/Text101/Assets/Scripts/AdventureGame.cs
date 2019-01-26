@@ -28,11 +28,11 @@ public class AdventureGame : MonoBehaviour
     {
         var nextStates = currentState.GetNextStates();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (nextStates.Length > 0 && (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)))
         {
             currentState = nextStates[0];
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (nextStates.Length > 1 && (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2)))
         {
             currentState = nextStates[1];
         }

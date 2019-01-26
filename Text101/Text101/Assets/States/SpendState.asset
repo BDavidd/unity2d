@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cf203f14efe3345bb7523f85e77dcc, type: 3}
+  m_Name: SpendState
+  m_EditorClassIdentifier: 
+  storyText: 'You spend the money.
+
+    Although you spent all the money attempting to impress Agrafena Alexandrovna,
+    your efforts have no success.
+
+    You end up alone, with a 3000 roubles debt and your honor shattered.
+
+
+    Press 1 to continue.'
+  nextStates:
+  - {fileID: 11400000, guid: d77edf3b5117de24380a1321c8533426, type: 2}
