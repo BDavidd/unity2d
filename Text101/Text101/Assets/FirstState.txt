@@ -1,0 +1,7 @@
+You are Dmitri Karamazov, an ex liutenant from the Russian Army.
+Your bethroted, Katerina Ivanova gave you 3000 roubles for you to send by mail to her aunt.
+You can deliver the money or spend them in order to impress the girl you like, Agrafena Alexandrovna.
+
+What do you do?
+1: Spend the money
+2: Deliver the money
