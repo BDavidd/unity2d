@@ -20,24 +20,39 @@ public class NumberWizard : MonoBehaviour
     void StartGame()
     {
         GuessAgain();
-        maximum = maximum + 1;
     }
 
     public void OnPressHigher()
     {
-        minimum = guess;
+        if (guess + 1 <= maximum)
+        {
+            minimum = guess + 1;
+        }
+        else
+        {
+            minimum = maximum;
+        }
+
         GuessAgain();
     }
 
     public void OnPressLower()
     {
-        maximum = guess;
+        if (guess - 1 >= minimum)
+        {
+            maximum = guess - 1;
+        }
+        else
+        {
+            maximum = minimum;
+        }
+
         GuessAgain();
     }
 
     void GuessAgain()
     {
-        guess = (maximum + minimum) / 2;
+        guess = Random.Range(minimum, maximum + 1);
         guessText.text = guess.ToString();
     }
 }
