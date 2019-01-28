@@ -38,12 +38,12 @@ public class NumberWizard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             minimum = guess;
-            GuessAgain();
+            GuessAgain("higher");
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             maximum = guess;
-            GuessAgain();
+            GuessAgain("lower");
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -52,9 +52,9 @@ public class NumberWizard : MonoBehaviour
         }
     }
 
-    void GuessAgain()
+    void GuessAgain(string guessStatus)
     {
         guess = (maximum + minimum) / 2;
-        Debug.Log($"So higher... Could it be {guess}?");
+        Debug.Log($"So {guessStatus}... Could it be {guess}?");
     }
 }
