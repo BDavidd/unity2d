@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] private int breakableBlocks;
-
+    private int breakableBlocks;
     private SceneLoader sceneLoader;
 
     private void Start()
@@ -18,10 +17,10 @@ public class Level : MonoBehaviour
         ++breakableBlocks;
     }
 
-    public void OnBlockBroken()
+    public void OnBlockDestroyed()
     {
         --breakableBlocks;
-        if (breakableBlocks == 0)
+        if (breakableBlocks <= 0)
         {
             sceneLoader.LoadNextScene();
         }
