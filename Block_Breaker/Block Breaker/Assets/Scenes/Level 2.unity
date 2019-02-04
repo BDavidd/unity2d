@@ -1522,8 +1522,60 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_text
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 75.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a40f535fdf5574aa1ddc3eed042163, type: 3}
+--- !u!114 &715622596 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+    type: 3}
+  m_PrefabInstance: {fileID: 715622595}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &734068169 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 577193602806184579, guid: f4b1b6f3434160542b68bd7f035561c7,
@@ -4064,5 +4116,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1451043750706739463, guid: 0d6b4b79eac8e744ba3162a7ceb7240d,
+        type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 715622596}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d6b4b79eac8e744ba3162a7ceb7240d, type: 3}
