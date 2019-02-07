@@ -7,12 +7,13 @@ public class Block : MonoBehaviour
     [SerializeField] private AudioClip destroySound;
     [SerializeField] private GameObject blockSparklesVFX;
     [SerializeField] private int maxHits;
+    [SerializeField] private Sprite[] hitSprites;
 
     // cached reference
     private Level level;
     private GameSession gameSession;
 
-    [SerializeField] private int timesHit = 0;
+    private int timesHit = 0;
 
     private void Start()
     {
@@ -44,6 +45,19 @@ public class Block : MonoBehaviour
         if (timesHit >= maxHits)
         {
             DestroyBlock();
+        }
+        else
+        {
+            ShowNextHitSprite();
+        }
+    }
+
+    private void ShowNextHitSprite()
+    {
+        int spriteIndex = timesHit - 1;
+        if (spriteIndex < hitSprites.Length)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
         }
     }
 
