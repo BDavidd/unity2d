@@ -6,7 +6,6 @@ public class Block : MonoBehaviour
 {
     [SerializeField] private AudioClip destroySound;
     [SerializeField] private GameObject blockSparklesVFX;
-    [SerializeField] private int maxHits;
     [SerializeField] private Sprite[] hitSprites;
 
     // cached reference
@@ -25,7 +24,7 @@ public class Block : MonoBehaviour
         level = FindObjectOfType<Level>();
         gameSession = FindObjectOfType<GameSession>();
 
-        if (tag == "BreakableBlock")
+        if (gameObject.CompareTag("BreakableBlock"))
         {
             level.CountBlocks();
         }
@@ -33,7 +32,7 @@ public class Block : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (tag == "BreakableBlock")
+        if (gameObject.CompareTag("BreakableBlock"))
         {
             HandleHit();
         }
@@ -42,6 +41,10 @@ public class Block : MonoBehaviour
     private void HandleHit()
     {
         ++timesHit;
+        
+        // A block with 1 additional sprite should be hit 2 times.
+        int maxHits = hitSprites.Length + 1;
+        
         if (timesHit >= maxHits)
         {
             DestroyBlock();
@@ -55,9 +58,14 @@ public class Block : MonoBehaviour
     private void ShowNextHitSprite()
     {
         int spriteIndex = timesHit - 1;
-        if (spriteIndex < hitSprites.Length)
+        if (spriteIndex < hitSprites.Length 
+            && hitSprites[spriteIndex] != null)
         {
             GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            Debug.LogError("Invalid block sprite array index " + gameObject.name);
         }
     }
 
