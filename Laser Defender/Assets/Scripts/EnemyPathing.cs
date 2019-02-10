@@ -3,16 +3,16 @@ using UnityEngine;
 
 public class EnemyPathing : MonoBehaviour
 {
-    [SerializeField] private GameObject path;
-    [SerializeField] private List<Transform> waypoints;
+    [SerializeField] private WaveConfig waveConfig;
     [SerializeField] private float moveSpeed = 2f;
 
+    private List<Transform> waypoints;
     private int waypointIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        AddPaths();
+        waypoints = waveConfig.GetWaypoints();
         transform.position = waypoints[waypointIndex].position;
     }
 
@@ -40,14 +40,5 @@ public class EnemyPathing : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    // Workaround needed because linking multiple prefabs is no longer possible
-    private void AddPaths()
-    {
-        waypoints.AddRange(path.transform.GetComponentsInChildren<Transform>());
-
-        // GetComponentsInChildren returns the parent at index 0
-        waypoints.RemoveAt(0);
     }
 }
