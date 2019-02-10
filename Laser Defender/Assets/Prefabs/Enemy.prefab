@@ -94,3 +94,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: {fileID: 4776839464787487993, guid: 5eda242d995df594390debfb604411f3, type: 3}
   waypoints: []
+  moveSpeed: 5
