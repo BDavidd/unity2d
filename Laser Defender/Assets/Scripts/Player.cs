@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.Experimental.Rendering;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         SetUpMoveBoundaries();
+        StartCoroutine(PrintWithDelay());
     }
 
     // Update is called once per frame
@@ -24,6 +25,13 @@ public class Player : MonoBehaviour
     {
         Move();
         Fire();
+    }
+
+    IEnumerator PrintWithDelay()
+    {
+        Debug.Log("Before the wait");
+        yield return new WaitForSeconds(3);
+        Debug.Log("After the wait");
     }
 
     private void Fire()
