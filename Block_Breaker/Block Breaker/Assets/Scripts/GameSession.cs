@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class GameSession : MonoBehaviour
@@ -8,6 +6,7 @@ public class GameSession : MonoBehaviour
     [Range(0.1f, 10f)] [SerializeField] private float gameSpeed = 1f;
     [SerializeField] private int pointsPerBlockDestroyed = 39;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private bool isAutoplayEnabled;
     
     [SerializeField] private int currentScore = 0;
 
@@ -45,5 +44,10 @@ public class GameSession : MonoBehaviour
     public void ResetScore()
     {
         Destroy(gameObject);
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoplayEnabled;
     }
 }

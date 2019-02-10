@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba134cc956c2ce2cb3971b0f619c56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSpeed: 0.65
+  gameSpeed: 0.85
   pointsPerBlockDestroyed: 39
   scoreText: {fileID: 5070699960907361946}
+  isAutoplayEnabled: 0
   currentScore: 0
 --- !u!1001 &1451043748848051681
 PrefabInstance:
@@ -60,6 +61,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_textInfo.textComponent
+      value: 
+      objectReference: {fileID: 5070699960907361946}
     - target: {fileID: 5559912369991249250, guid: f8a40f535fdf5574aa1ddc3eed042163,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -165,11 +171,46 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5944076569853807483, guid: f8a40f535fdf5574aa1ddc3eed042163,
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
         type: 3}
-      propertyPath: m_textInfo.textComponent
-      value: 
-      objectReference: {fileID: 5070699960907361946}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -220
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 407.40002
+      objectReference: {fileID: 0}
+    - target: {fileID: 382679756972984337, guid: f8a40f535fdf5574aa1ddc3eed042163,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 83.900024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8a40f535fdf5574aa1ddc3eed042163, type: 3}
 --- !u!224 &6416470917681203331 stripped
