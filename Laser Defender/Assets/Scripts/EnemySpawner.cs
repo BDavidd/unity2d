@@ -15,19 +15,15 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(SpawnAllEnemiesInWave(currentWave));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
     {
         for (int index = 0; index < waveConfig.GetNumberOfEnemies(); ++index)
         {
-            Instantiate(waveConfig.GetEnemyPrefab(),
-                waveConfig.GetWaypoints()[0].position,
+            var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(),
+                waveConfig.GetWaypoints()[0].position, 
                 Quaternion.identity);
+            
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns() +
                                             Random.Range(0, waveConfig.GetSpawnRandomFactor()));
